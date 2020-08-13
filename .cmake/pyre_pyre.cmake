@@ -79,6 +79,7 @@ function(pyre_pyreLib)
   target_link_libraries(
     pyre
     journal
+    rt
     )
 
   # install all the pyre headers
