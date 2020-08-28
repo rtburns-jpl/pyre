@@ -93,6 +93,10 @@ function(pyre_pyreLib)
     pyre
     journal
     )
+  find_library(LIBRT rt)
+  if(LIBRT)
+    target_link_libraries(pyre ${LIBRT})
+  endif()
 
   # install all the pyre headers
   install(
